@@ -1,1 +1,262 @@
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+:root {
+  /* Primary */
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+
+  /* Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Very-Light-Grayish-Blue: hsl(210, 60%, 98%);
+  --Light-Grayish-Blue-1: hsl(211, 68%, 94%);
+  --Light-Grayish-Blue-2: hsl(205, 33%, 90%);
+  --Grayish-Blue: hsl(219, 14%, 63%);
+  --Dark-Grayish-Blue: hsl(219, 12%, 42%);
+  --Very-Dark-Blue: hsl(224, 21%, 14%);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Very-Light-Grayish-Blue);
+}
+
+#wrapper {
+  width: 55%;
+  background-color: var(--White);
+  box-shadow: 0 0 20px var(--Light-Grayish-Blue-1);
+  border-radius: 20px;
+  margin: 2rem 0;
+  padding: 2.25rem;
+}
+
+#top-of-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#notification-count-section {
+  display: flex;
+  align-items: center;
+}
+
+#notification-count-section h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--Very-Dark-Blue);
+}
+
+#notification-count-section div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: var(--Blue);
+  border-radius: 5px;
+  margin-left: 0.6rem;
+  margin-top: 2px;
+}
+
+#notification-count-section div p {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--White);
+  margin-bottom: 2px;
+}
+
+#mark-all-read-btn {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--Dark-Grayish-Blue);
+}
+
+#mark-all-read-btn:hover {
+  color: var(--Blue);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.notifications-section {
+  display: flex;
+  margin-bottom: 0.8rem;
+  padding: 1.25rem;
+  border-radius: 10px;
+}
+
+.notifications-section:last-child {
+  margin-bottom: 0;
+}
+
+.notifications-section img {
+  width: 50px;
+  height: 50px;
+  align-self: flex-start;
+}
+
+.notifications-section img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.unread {
+  background-color: var(--Light-Grayish-Blue-1);
+}
+
+.notification-info {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.35rem;
+  font-weight: 500;
+}
+
+.info-para {
+  font-size: 1rem;
+  color: var(--Dark-Grayish-Blue);
+}
+
+.posted-time {
+  font-size: 1rem;
+  color: var(--Grayish-Blue);
+  margin-top: 0.4rem;
+}
+
+.span-1 {
+  color: var(--Very-Dark-Blue);
+  font-weight: 800;
+  margin-right: 2px;
+}
+
+.span-1:hover {
+  color: var(--Blue);
+  cursor: pointer;
+}
+
+.span-2 {
+  font-weight: 800;
+  margin-left: 2px;
+}
+
+.span-2:hover {
+  color: var(--Blue);
+  cursor: pointer;
+}
+
+.span-3 {
+  font-weight: 800;
+  color: var(--Blue);
+}
+
+.span-3:hover {
+  cursor: pointer;
+}
+
+.red-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--Red);
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+#message-div {
+  margin-top: 0.7rem;
+  border: 2px solid var(--Light-Grayish-Blue-2);
+  padding: 1.25rem 1rem;
+  border-radius: 5px;
+}
+
+#message-div:hover {
+  background-color: var(--Light-Grayish-Blue-2);
+  cursor: pointer;
+}
+
+#message-div p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--Dark-Grayish-Blue);
+  line-height: 24px;
+}
+
+#notification-5 {
+  position: relative;
+}
+
+#post {
+  position: absolute;
+  right: 20px;
+}
+
+#post:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* Responsive CSS */
+
+@media screen and (max-width: 480px) {
+  #wrapper {
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 1.5rem 1rem;
+  }
+
+  #top-of-page {
+    margin-bottom: 1.75rem;
+  }
+
+  #notification-count-section h1 {
+    font-size: 1.35rem;
+  }
+
+  #notification-count-section div {
+    width: 21.5px;
+    height: 21.5px;
+    margin-left: 0.5rem;
+    margin-top: 1px;
+  }
+
+  #notification-count-section div p {
+    margin-bottom: 1px;
+  }
+
+  .notifications-section {
+    margin-bottom: 0.8rem;
+    padding: 1rem 0.8rem;
+  }
+
+  .notifications-section img {
+    width: 47px;
+    height: 47px;
+  }
+
+  .notification-info {
+    margin-left: 1.15rem;
+  }
+
+  .posted-time {
+    margin-top: 0.55rem;
+  }
+
+  #notification-5 {
+    position: static;
+  }
+
+  #post {
+    position: static;
+  }
+}
