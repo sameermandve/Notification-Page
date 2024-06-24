@@ -75,9 +75,12 @@ body {
 }
 
 #mark-all-read-btn {
+  appearance: none;
+  border: 0;
   font-size: 1rem;
   font-weight: 500;
   color: var(--Dark-Grayish-Blue);
+  background-color: transparent;
 }
 
 #mark-all-read-btn:hover {
