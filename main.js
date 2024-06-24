@@ -6,10 +6,16 @@ unreadCount.innerText = unread.length;
 
 MarkAllAsReadBtn.addEventListener("click", () => {
   const notificationUnread = document.querySelectorAll("div.unread");
+  const unreadAlert = document.querySelectorAll(".red-dot");
 
-  for (let elem of notificationUnread) {
-    elem.classList.remove("unread");
+  for (let e of notificationUnread) {
+    e.classList.remove("unread");
   }
 
-  unreadCount.innerText = 0;
+  for (let e of unreadAlert) {
+    e.classList.remove("red-dot");
+  }
+
+  const newUnread = document.querySelectorAll(".unread");
+  unreadCount.innerText = newUnread.length;
 });
